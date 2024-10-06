@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <title>PGS GAME BOT - Jouez, collectez des points, et divertissez-vous.</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="assets/static/pp-root.css">
+  <link rel="stylesheet" href="style.css">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <link rel="shortcut icon" href="assets/img/pp-Logo.png" type="image/x-icon">
+  <link rel="manifest" href="/manifest.json">
+
+  <!-- Fedapay Checkout-->
+  <script src="https://cdn.fedapay.com/checkout.js?v=1.1.7"></script>
+
+  <!-- Google ads-->
+  <script async src=https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9682293308540812
+    crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+  <header></header>
+
+  <main>
+    <div class="announcement-bar">
+      <div class="announcement-text">
+          <p>Nous n'avons aucune nouvelle information pour l'instant ! Continuez d'explorer nos nouveaux jeux et applications !</p>
+      </div>
+      <button class="close-btn" onclick="closeAnnouncement()">X</button>
+  </div>
+  
+    <div class="title">
+      <img src="assets/img/pp-repository.png" alt="Couerture" class="cover-image">
+      <h1>😍 Holla, explorateur du numérique ! </h1>
+      <p> Ravi de te revoir ici ! Que tu sois en quête de défis intellectuels avec nos jeux comme ou
+        que tu aies besoin d'outils pratiques comme, tu es au bon endroit. <br>
+        Prêt à plonger dans l'univers de nos jeux captivants et de nos applications innovantes ?
+        C’est parti, l’aventure commence maintenant ! 🏌️</p>
+    </div>
+
+    <hr>
+
+    <!-- Recherche et Filtres -->
+    <div class="search-filters">
+      <input type="text" id="search-bar" placeholder="Rechercher des jeux ou des applications...">
+
+      <div class="recent-searches" id="recent-searches" style="display: none;">
+        <ul id="recent-searches-list"></ul>
+        <button id="clear-all-searches">Effacer Tout</button>
+      </div>
+
+      <br><br>
+
+      <div class="filters">
+        <select id="filter-games">
+          <option value="all">Tous les jeux</option>
+          <option value="puzzle">Jeu de puzzle</option>
+          <option value="societe">Jeu de société</option>
+          <option value="quiz">Jeu de quiz</option>
+          <option value="memoire">Jeu de mémoire</option>
+        </select>
+
+        <select id="filter-apps">
+          <option value="all">Toutes les applications</option>
+          <option value="style">Style</option>
+          <option value="generateur">Générateur textuelle</option>
+          <option value="maths">Mathématiques</option>
+          <option value="autre">Autre</option>
+        </select>
+
+        <select id="sort-filter">
+          <option value="default">Tri par défaut</option>
+          <option value="alpha-games">Jeux par ordre alphabétique</option>
+          <option value="alpha-apps">Applications par ordre alphabétique</option>
+          <option value="alpha-all">Tout par ordre alphabétique</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Section des jeux -->
+    <section class="games" id="games">
+      <div class="game" data-category="quiz">
+        <img src="assets/img/game-TBLogo.png" alt="Logo Trivia Battle" id="logo">
+        <h2>Trivia Battle</h2>
+        <p>Mettez à l'épreuve vos connaissances dans un duel captivant en répondant à des
+          questions pour gagner des points.</p>
+        <a href="games/TriviaBattle/TriviaBattle.html">Jouer à Trivia Battle</a>
+      </div>
+
+      <div class="game" data-category="memoire">
+        <img src="assets/img/game-MTLogo.png" alt="Logo Memo Tiles" id="logo">
+        <h2>Memo Tiles</h2>
+        <p>Mémorisez et reproduisez des séquences de couleurs. Testez et améliorez votre mémoire
+          visuelle en associant les bonnes tuiles.</p>
+        <a href="games/MemoTiles/MemoTiles.html">Jouer à Memo Tiles</a>
+      </div>
+
+      <div class="game" data-category="societe">
+        <img src="assets/img/game-AXLogo.png" alt="Logo AlignX" id="logo">
+        <h2>AlignX</h2>
+        <p>Avec plusieurs modes de jeu et la possibilité de jouer contre des amis ou l'IA, AlignX est le parfait mélange
+          de stratégie et de simplicité, accessible à tous.</p>
+        <a href="games/AlignX/AlignX.html">Jouer à AlignX</a>
+      </div>
+
+      <div class="game" data-category="puzzle">
+        <img src="assets/img/game-RSLogo.png" alt="Logo Run Snake" id="logo">
+        <h2>RunSnake</h2>
+        <p>Guidez le serpent à travers des labyrinthes complexes en évitant les obstacles, en
+          collectant des objets spéciaux et en atteignant une destination spécifique.</p>
+        <a href="#" id="soon">Bientôt disponible</a>
+      </div>
+    </section>
+    <button id="toggle-games-btn" class="toggle-btn">Voir plus</button>
+
+    <!-- Section des applications -->
+    <section class="apps" id="apps">
+      <div class="app" data-category="generateur">
+        <img src="assets/img/app-LTLogo.png" alt="Logo Lingo Translator" id="logo">
+        <h2>Linguo Translator</h2>
+        <p>Votre compagnon de traduction tout-en-un, conçu pour briser les barrières
+          linguistiques. Que ce soit pour un voyage à l'étranger, une réunion internationale, ou simplement pour
+          apprendre une nouvelle langue.</p>
+        <a href="#" id="soon">Bientôt disponible</a>
+      </div>
+
+      <div class="app" data-category="style">
+        <img src="assets/img/app-ABLogo.png" alt="Logo Art Board" id="logo">
+        <h2>Art Board</h2>
+        <p>Transformez votre appareil en une ardoise virtuelle, prête à accueillir vos
+          inspirations artistiques à tout moment. Avec une palette d'outils variés et la possibilité de sauvegarder et
+          partager vos créations.</p>
+        <a href="apps/ArtBoard/Artboard.html">Dessiner</a>
+      </div>
+
+      <div class="app" data-category="style">
+        <img src="assets/img/app-TTLogo.png" alt="Logo Tickle Time" id="logo">
+        <h2>Tickle Time</h2>
+        <p>Besoin d’une alarme pour vous rappeler quelque chose ? Eh bien, Tickle Time pourrait
+          bien y parvenir
+          … ou pas. Ne comptez pas trop dessus pour vous réveiller ; mais elle saura
+          certainement vous faire
+          sourire avec son timing.</p>
+        <a href="apps/TickleTime/TickleTime.html">Réglez l'alarme</a>
+      </div>
+
+      <div class="app" data-category="style">
+        <img src="assets/img/app-LCLogo.png" alt="Logo LumiClock" id="logo">
+        <h2>LumiClock</h2>
+        <p>Application d'horloge développée pour offrir une expérience de suivi du temps unique
+          et pratique. Il
+          présente à la fois un affichage analogique classique et une horloge numérique
+          vous permettant de
+          consulter l'heure de manière simple et précise.</p>
+        <a href="apps/LumiClock/LumiClock.html">Afficher l'heure</a>
+      </div>
+
+      <div class="app" data-category="maths">
+        <img src="assets/img/app-QCLogo.png" alt="Logo Quick Calculator" id="logo">
+        <h2>Quick Calculator</h2>
+        <p>Calculatrice rapide et intuitive dont vous avez besoin pour vos calculs quotidiens.
+          Que ce soit pour
+          des opérations simples ou des calculs plus complexes, elle vous offre une
+          interface fluide et
+          efficace pour résoudre tous vos problèmes numériques en un clin d'œil.</p>
+        <a href="apps/QuickCalc/QuickCalc.html">Saisie mon opération</a>
+      </div>
+
+      <div class="app" data-category="generateur">
+        <img src="assets/img/app-PMLogo.png" alt="Logo Pass Master" id="logo">
+        <h2>Pass Master</h2>
+        <p>Créer des mots de passe ultra-sécurisés en un clic. Grâce à son générateur de haute
+          performance, vous
+          n'aurez plus jamais à vous soucier des combinaisons faibles ou faciles à
+          deviner. PassMaster, c'est
+          la clé pour garder vos données en sécurité avec style et simplicité.</p>
+        <a href="apps/PassMaster/PassMaster.html">Générer un mot de passe</a>
+      </div>
+    </section>
+    <button id="toggle-apps-btn" class="toggle-btn">Voir plus</button>
+
+    <hr>
+
+    <div class="soutien" id="soutien">
+      <p>&#10084; Payez-moi un café pour me soutenir.</p>
+      <!-- Don de 1.000 X0F -->
+      <div>
+        <p>Don fixe de 1 000 X0F.</p>
+        <button class="kkiapay-button">Via Kkiapay</button> |
+        <button id="pay-btn">Via Fedapay</button>
+      </div>
+      <!-- Don de volontaire -->
+      <div>
+        <p>Don volontaire.</p>
+        <a href="https://direct.kkiapay.me/3343/PGSGameBot-JVu9oFIfh" class="direct">Via
+          Kkiapay</a> |
+        <a href="https://me.fedapay.com/pgsgamebot" class="direct">Via Fedapay</a>
+      </div>
+    </div>
+  </main>
+
+  <footer></footer>
+
+  <!-- Popup -->
+  <div id="rate-popup" class="rate-popup">
+    <div class="popup-content">
+      <span id="rate-close" class="popup-close">&times;</span>
+      <img src="../../assets/img/pp-avis.png" alt="Donnez un avis" id="poplogo">
+      <h2>Comment évaluez-vous cette plateforme ?</h2>
+
+      <div id="emoji-container" class="emoji-container">
+        <span class="emoji" data-value="😠 Grrr...">😠</span>
+        <span class="emoji" data-value="😟 Hmm...">😟</span>
+        <span class="emoji" data-value="😐 Bof..">😐</span>
+        <span class="emoji" data-value="😊 Yay !">😊</span>
+        <span class="emoji" data-value="😍 Wow !">😍</span>
+      </div>
+
+      <textarea id="comment" placeholder="Dites-nous plus sur votre avis (200 caractères au maximum) [Facultatif]"
+        maxlength="200" rows="5" style="display: none;"></textarea>
+
+      <button id="submit-rating-btn" style="display: none;">Soumettre</button>
+    </div>
+  </div> <!-- Avis -->
+
+  <div id="popup" class="popup">
+    <div class="popup-content">
+      <span id="popup-close" class="popup-close">&times;</span>
+      <img src="../../assets/img/pp-BlocPub.png" alt="Rejet publicité" id="poplogo">
+      <h2>Publicité rejetée</h2>
+      <p>D'accord, nous comprenons votre choix 😉. <br> Allons-y, continuons avec les
+        explorations.</p>
+      <br>
+      <a href="#" id="popup-close-btn">Continuer</a>
+    </div>
+  </div> <!-- Bloc Pub -->
+
+  <script src="script.js"></script>
+  <script src="worker.js"></script>
+
+  <!-- kkiapay-->
+  <script Sandbox amount="1000" callback="https://progestionsoft.github.io" data="Faites un don" position="center"
+    theme="#0095ff" sandbox="true" key="5b5d49c8c8117b6d46b54675992d50fb8ca29e64"
+    src="https://cdn.kkiapay.me/k.js"></script>
+
+  <!-- Fedapay-->
+  <script type="text/javascript">
+    FedaPay.init('#pay-btn', {
+      public_key: 'pk_live_DQOlxWKiYAe5Smj3mNdXWPJ-',
+      transaction: {
+        amount: 1000,
+        description: 'soutenir l\'initiative'
+      },
+    });
+  </script>
+
+  <!-- Google translate-->
+  <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+</body>
+
+</html>

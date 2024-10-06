@@ -1,0 +1,131 @@
+#game {
+  background: linear-gradient(to right, #fedc45, #ebc95a);
+}
+
+#start-container {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.select-parameter {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+#start-button,
+#stop-button {
+  display: block;
+  color: #fff;
+  font-family: var(--btn-font);
+  border-radius: 10px;
+  border: none;
+  margin: 20px auto;
+  padding: 10px 20px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#start-button {
+  background-color: var(--b-bg);
+}
+
+#start-button:hover {
+  background-color: var(--txt-clr);
+  border-radius: 50px;
+  transition: 0.6s ease-in-out;
+}
+
+#stop-button {
+  background-color: var(--del-clr);
+}
+
+#stop-button:hover {
+  background-color: var(--del-hvr);
+  border-radius: 50px;
+  transition: 0.6s ease-in-out;
+}
+
+#game-container {
+  text-align: center;
+  width: 90%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+#question-container {
+  background-color: var(--w-bg);
+  border-radius: 8px;
+  margin-bottom: 20px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+#question-number {
+  color: var(--sdr-clr);
+  font-weight: bolder;
+}
+
+#question {
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+#answers button {
+  display: block;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  width: 100%;
+  margin: 5px 0;
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#answers button:hover {
+  background-color: var(--w-bg);
+  border: 1px dashed #000;
+  border-radius: 10px;
+}
+
+.correct {
+  background-color: var(--win-clr) !important;
+  color: #fff;
+}
+
+.incorrect {
+  background-color: var(--del-clr) !important;
+  color: #fff;
+}
+
+#timer {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+#score-container {
+  margin-top: 20px;
+}
+
+#score {
+  font-size: 24px;
+}
+
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  #game-container {
+    padding: 15px;
+  }
+
+  #countdown,
+  #score {
+    font-size: 18px;
+  }
+
+  .select-parameter {
+    display: block;
+  }
+}

@@ -1,0 +1,165 @@
+@font-face {
+  font-family: VCR;
+  src: url("../../assets/fonts/VCR.ttf");
+}
+
+#game {
+  background: linear-gradient(to right, #fedc45, #1ed94f);
+}
+
+.controls {
+  margin: 20px 0;
+}
+
+#reset {
+  background-color: var(--b-bg);
+  color: #fff;
+  font-family: var(--btn-font);
+  border-radius: 10px;
+  border: none;
+  padding: 8px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#reset:hover {
+  background-color: var(--txt-clr);
+  border-radius: 50px;
+  transition: 0.6s ease-in-out;
+}
+
+.container {
+  display: grid;
+  font-family: VCR;
+  margin: 20px auto;
+  justify-content: center;
+  gap: 10px;
+  grid-template-columns: repeat(3, 120px);
+  grid-template-rows: repeat(3, 120px);
+}
+
+.tile {
+  display: flex;
+  background-color: #fff;
+  font-size: 2em;
+  border-radius: 10px;
+  width: 120px;
+  height: 120px;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease;
+}
+
+.tile:hover {
+  background-color: #ddd;
+  border: 1px solid #333;
+  transform: scale(1.05);
+}
+
+.tile.x-win {
+  background-color: var(--win-clr);
+}
+
+.tile.o-win {
+  background-color: var(--del-clr);
+}
+
+.tile.winner {
+  background-color: var(--win-clr);
+  color: #fff;
+  border: 2px solid #fff;
+}
+
+.tile.loser {
+  background-color: var(--del-clr);
+  color: #fff;
+  border: 2px solid #fff;
+}
+
+.tile.disabled {
+  pointer-events: none;
+}
+
+/* Motif de grille */
+.tile.grid-pattern {
+  background-image: linear-gradient(45deg, #ccc 25%, transparent 25%),
+    linear-gradient(-45deg, #ccc 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, #ccc 75%),
+    linear-gradient(-45deg, transparent 75%, #ccc 75%);
+  background-size: 20px 20px;
+  background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+}
+
+.display {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+}
+
+.display-player {
+  font-family: VCR;
+  font-weight: bold;
+}
+
+.announcer {
+  font-size: 2em;
+  margin-top: 20px;
+}
+
+.hide {
+  display: none;
+}
+
+.stats {
+  display: flex;
+  font-size: 1.2em;
+  margin: 20px 0;
+  justify-content: center;
+  gap: 20px;
+}
+
+.stats p {
+  margin: 5px 0;
+}
+
+#gamesPlayed {
+  color: var(--b-bg);
+  font-weight: bolder;
+}
+
+#wins {
+  color: var(--win-clr);
+  font-weight: bolder;
+}
+
+#losses {
+  color: var(--del-clr);
+  font-weight: bolder;
+}
+
+#ties {
+  color: var(--txt-clr);
+  font-weight: bolder;
+  
+}
+
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .container {
+    max-width: 300px;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+
+  }
+
+  .tile {
+    width: 100px;
+    height: 100px;
+  }
+
+  .stats {
+    display: inline;
+  }
+}
