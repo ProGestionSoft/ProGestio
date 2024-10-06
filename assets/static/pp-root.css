@@ -1,0 +1,21 @@
+@import url(https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Roboto:wght@300;400;500&family=Lato:wght@300;400;700&display=swap);
+
+:root {
+  --pmr-clr: #08568b;
+  --sdr-clr: #042b45;
+  --txt-clr: #333;
+  --del-clr: #6a0813;
+  --del-hvr: #f83600;
+  --win-clr: #106102;
+  --b-bg: #000;
+  --w-bg: #f9f9f9;
+
+  --game-bg: linear-gradient(90deg, #b98108, #f83600);
+  --app-bg: linear-gradient(90deg, #08568b, #00a2e8);
+
+  --df-title-size: 2em;
+  --df-text-size: 1em;
+  --title-font: 'Courier New', Courier, monospace;
+  --df-font: 'Poppins', 'Roboto', 'Lato', sans-serif;
+  --btn-font: cursive;
+}

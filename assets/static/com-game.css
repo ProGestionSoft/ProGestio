@@ -1,0 +1,54 @@
+/* GENERAL */
+body {
+  background: var(--game-bg);
+}
+
+
+/* HEADER */
+#header {
+  background-color: var(--b-bg);
+}
+
+header h1 {
+  color: #fff;
+}
+
+
+/* MENU */
+.menu-toggle {
+  color: #fff;
+}
+
+.menu a {
+  color: #fff;
+}
+
+.menu a:hover {
+  background-color: #fff;
+  color: var(--txt-clr);
+}
+
+.submenu a {
+  color: #fff;
+}
+
+.submenu a:hover {
+  background-color: #fff;
+  color: var(--txt-clr);
+}
+
+
+/* FOOTER */
+footer {
+  background-color: var(--b-bg);
+  color: #fff;
+}
+
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .menu {
+    background-color: #666;
+    border: #fff solid 1px;
+  }
+}

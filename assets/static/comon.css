@@ -1,0 +1,267 @@
+/* GENERAL */
+body {
+  color: var(--txt-clr);
+  font-family: var(--df-font);
+  font-size: var(--df-text-size);
+  text-align: center;
+  padding: 0;
+  height: 100vh;
+}
+
+#game,
+#app {
+  width: 100%;
+  max-width: 800px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+
+/* HEADER */
+header {
+  text-align: center;
+  font-family: var(--title-font);
+  margin-bottom: 20px;
+  padding: 10px;
+  width: 100%;
+}
+
+#header {
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+
+#logo {
+  width: 50px;
+}
+
+header h1 {
+  font-size: 24px;
+  margin: 0;
+}
+
+
+/* MENU */
+#navbar {
+  position: relative;
+}
+
+.menu-toggle {
+  background: none;
+  margin-right: 20px;
+  border: none;
+  display: none;
+  font-size: var(--df-title-size);
+  cursor: pointer;
+}
+
+.menu-icon::before {
+  content: '☰';
+}
+
+.menu-toggle.x .menu-icon::before {
+  content: '✖';
+}
+
+.menu {
+  list-style-type: none;
+  display: flex;
+  margin: 0 30px;
+  padding: 0;
+  z-index: 10;
+}
+
+.menu>li {
+  position: relative;
+}
+
+.menu a {
+  text-decoration: none;
+  padding: 0 10px;
+  display: block;
+  border-radius: 20px;
+}
+
+.submenu {
+  background: var(--txt-clr);
+  list-style-type: none;
+  min-width: 150px;
+  display: none;
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  top: 100%;
+  left: 0;
+  border-radius: 10px;
+  width: 150%;
+}
+
+.submenu li {
+  padding: 10px;
+}
+
+.menu>li:hover .submenu {
+  display: block;
+}
+
+
+/* INSTRUCTIONS */
+#toggle-instructions-btn {
+  background-color: transparent;
+  color: var(--txt-clr);
+  font-size: 16px;
+  font-weight: bolder;
+  border: none;
+  margin-bottom: 10px;
+  padding: 10px 20px;
+  cursor: help;
+}
+
+#toggle-instructions-btn:hover {
+  color: var(--b-bg);
+}
+
+#instructions {
+  background-color: var(--w-bg);
+  text-align: left;
+  border-radius: 20px;
+  margin: 0 20px;
+  margin-bottom: 15px;
+  padding: 10px;
+}
+
+#instructions h2 {
+  color: var(--pmr-clr);
+  text-align: center;
+}
+
+h3 {
+  color: var(--sdr-clr);
+}
+
+/* SONS */
+#toggle-sound-settings-btn {
+  background-color: transparent;
+  color: var(--txt-clr);
+  font-size: 18px;
+  border: none;
+  display: block;
+  margin: 0 auto;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+#toggle-sound-settings-btn:hover {
+  color: var(--b-bg);
+}
+
+#sound-settings {
+  display: none;
+  background-color: var(--w-bg);
+  text-align: left;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  padding: 15px;
+  width: 300px;
+  position: fixed;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -20%);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+#sound-settings-btn {
+  color: ar(--txt-clr);
+  font-size: 30px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+}
+
+#sound-settings-btn:hover {
+  color: var(--del-hvr);
+  font-weight: bolder;
+}
+
+#sound-settings h2 {
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 10px;
+
+}
+
+#sound-settings hr {
+  background-color: #999;
+  border: none;
+  width: 80%;
+  height: 1px;
+  margin: 2px auto;
+}
+
+
+/* FILTRES */
+select {
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+
+
+/* FOOTER */
+footer {
+  font-family: var(--title-font);
+  text-align: center;
+  margin-top: 20px;
+  padding: 2px;
+}
+
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .menu {
+    display: none;
+    border-radius: 10px;
+    padding: 20px 10px;
+    flex-direction: column;
+    width: 200px;
+    position: absolute;
+    right: 10px;
+    gap: 15px;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .menu.show {
+    display: flex;
+  }
+
+  .submenu {
+    position: static;
+    width: 100%;
+  }
+
+  .submenu li {
+    padding: 10px;
+    border-top: 1px solid #444;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+
+  button {
+    font-size: 16px;
+    padding: 12px;
+  }
+}

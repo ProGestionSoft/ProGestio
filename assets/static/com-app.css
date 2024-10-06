@@ -1,0 +1,54 @@
+/* GENERAL */
+body {
+  background: var(--app-bg);
+}
+
+
+/* HEADER */
+#header {
+  background-color: var(--w-bg);
+}
+
+header h1 {
+  color: var(--b-bg);
+}
+
+
+/* MENU */
+.menu-toggle {
+  color: var(--b-bg);
+}
+
+.menu a {
+  color: var(--b-bg);
+}
+
+.menu a:hover {
+  background-color: var(--txt-clr);
+  color: var(--w-bg);
+}
+
+.submenu a {
+  color: #fff;
+}
+
+.submenu a:hover {
+  background-color: #fff;
+  color: var(--txt-clr);
+}
+
+
+/* FOOTER */
+footer {
+  background-color: #fff;
+  color: var(--b-bg);
+}
+
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .menu {
+    background-color: var(--w-bg);
+    border: #000 solid 1px;
+  }
+}
