@@ -1,5 +1,5 @@
 # PGS Game Bot
-![Couverture](0src/img/repository.png)
+![Couverture](assets\img\pp-repository.png)
 
 **PGS Game Bot** est un bot Telegram conçu pour intégrer et gérer une variété de jeux. Ce bot permettra aux utilisateurs de jouer à différents jeux, de collecter des points, et de se divertir directement sur Telegram.
 
